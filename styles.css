@@ -1,0 +1,496 @@
+/* =========================================================
+   JARDÍN DIGITAL DE MI VIDEOJUEGO
+   Plantilla para la entrega final
+
+   YA ESTÁ RESUELTO: reset, cajas y layout (Flexbox y Grid).
+   TÚ COMPLETAS: las MISIONES 1 a 4, al final del archivo.
+   Cambia los colores de :root por la paleta de tu juego.
+   ========================================================= */
+
+:root {
+  /* Paleta vaporwave de partida: cámbiala por los colores de tu juego en Bitsy */
+  --fondo: #353839;     /* color principal */
+  --superficie: #353839;
+  --texto: #abacad;     /* color secundario */
+  --suave: #abacad;
+  --acento: #abacad;
+  --acento-2: #abacad;
+
+  /* Fuentes: Misión 1 */
+  --fuente-titulos: "Press Start 2P", "Courier New", monospace;
+  --fuente-texto: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--acento);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+/* al ir a una sección desde el menú, que no quede tapada por la cabecera pegada */
+section[id] {
+  scroll-margin-top: 110px;
+}
+
+/* ---------- Cabecera (Flexbox) ---------- */
+/* pegada arriba: el menú (y "Inicio") se ven aunque hayas bajado */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--fondo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 24px;
+  border-bottom: 3px solid var(--acento);
+}
+
+.marca {
+  color: var(--texto);
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: var(--texto);
+  text-decoration: none;
+}
+
+/* ---------- Portada ---------- */
+.portada {
+  text-align: center;
+  padding: 72px 16px;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 4px 12px;
+  border: 2px solid var(--acento);
+  color: var(--acento);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.titulo {
+  font-size: clamp(1.5rem, 5vw, 2.6rem);
+  line-height: 1.4;
+}
+
+.cursor {
+  color: var(--acento);
+}
+
+.lema {
+  max-width: 50ch;
+  margin: 0 auto 28px;
+  color: var(--suave);
+  font-size: 1.1rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 3px solid var(--texto);
+  background: var(--acento);
+  color: var(--fondo);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ---------- El juego ---------- */
+.pantalla {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 4px solid var(--texto);
+  background: var(--superficie);
+}
+
+#juego {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  background: #000;
+}
+
+.controles {
+  max-width: 560px;
+  margin: 16px auto 0;
+  color: var(--suave);
+}
+
+/* ---------- Historia ---------- */
+.historia p {
+  max-width: 65ch;
+}
+
+/* ---------- Referente (el poema) ---------- */
+.referente p {
+  max-width: 65ch;
+  line-height: 1.75;     /* aire entre renglones */
+  break-inside: avoid;   /* en dos columnas, cada estrofa se queda entera */
+}
+
+/* ---------- Personajes (Grid) ---------- */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.personaje {
+  padding: 20px;
+  border: 3px solid var(--texto);
+  background: var(--superficie);
+  text-align: center;
+}
+
+
+.sprite {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+  image-rendering: pixelated; /* las capturas de Bitsy se ven nítidas al ampliarlas */
+}
+
+div.sprite {
+  background: var(--acento); /* cuadro de reemplazo mientras pones tu captura */
+}
+
+/* ---------- Créditos ---------- */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--suave);
+}
+
+/* ---------- Pie ---------- */
+.pie {
+  padding: 24px;
+  border-top: 3px solid var(--acento);
+  text-align: center;
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   MISIONES · las completas tú, con la guía
+   ========================================================= */
+
+/* MISIÓN 1 · FUENTES
+   Dos familias de Google Fonts: una para títulos y otra para leer. */
+body {
+  font-size: 1.05rem;   /* rem: múltiplo del tamaño base del navegador (16px) */
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;     /* las fuentes de píxel no traen negrita: sin esto el navegador la inventa */
+}
+
+h2 {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* el interlineado y el corte de estrofas del poema están en "Referente" */
+
+/* MISIÓN 2 · COLOR (Camino A: degradados y patrones) */
+.portada {
+  background:
+    radial-gradient(circle at 86% 22%, var(--acento) 0 5%, transparent 5.5%),  /* un sol */
+    linear-gradient(180deg, var(--fondo) 0%, rgb(171 172 173 / 0.3) 140%);
+}
+
+.pantalla {
+  background: repeating-conic-gradient(var(--superficie) 0 25%, rgb(171 172 173 / 0.12) 0 50%) 0 0 / 24px 24px;
+}
+
+/* tema claro: si el sistema lo pide, se invierten los mismos dos colores */
+@media (prefers-color-scheme: light) {
+  :root {
+    --fondo: #abacad;
+    --superficie: #abacad;
+    --texto: #353839;
+    --suave: #353839;
+    --acento: #353839;
+    --acento-2: #353839;
+  }
+}
+
+/* MISIÓN 3 · PSEUDOCLASES Y TRANSICIONES */
+.menu a {
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  text-decoration: underline;   /* con dos colores, el subrayado marca el cursor */
+}
+
+/* enlaces dentro de párrafos: subrayados para distinguirlos del texto */
+p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* foco visible: quien navega con teclado tiene que saber dónde está */
+.menu a:focus-visible,
+.boton:focus-visible,
+.personaje:focus-visible,
+.saltar:focus-visible {
+  outline: 3px solid var(--acento-2);
+  outline-offset: 4px;
+}
+
+/* enlace para saltar directo al juego: oculto hasta que recibe foco */
+.saltar {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 10;
+  padding: 8px 16px;
+  background: var(--acento);
+  color: var(--fondo);
+  font-weight: 700;
+}
+
+.saltar:focus {
+  top: 16px;
+}
+
+/* botón con sombra dura que se hunde */
+.boton {
+  box-shadow: 6px 6px 0 var(--texto);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--fondo);
+  color: var(--texto);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--texto);
+}
+
+.boton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0 var(--texto);
+}
+
+/* tarjetas de personajes */
+.personaje {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.personaje:hover {
+  transform: translateY(-6px);
+  border-color: var(--acento);
+}
+
+@keyframes flotar {
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes parpadeo {
+  50% { opacity: 0; }
+}
+
+@keyframes saltito {
+  50% { transform: translateY(-6px); }
+}
+
+.titulo {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.cursor {
+  animation: parpadeo 1s steps(1) infinite;
+}
+
+.personaje:hover .sprite {
+  animation: saltito 0.5s steps(2) infinite;
+}
+
+/* ---------- ÍTEMS: tarjetas con la misma animación que los personajes ---------- */
+.Items article {
+  padding: 20px;
+  border: 3px solid var(--texto);
+  background: var(--superficie);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.Items article:hover {
+  transform: translateY(-6px);
+  border-color: var(--acento);
+}
+
+.Items article:focus-visible {
+  outline: 3px solid var(--acento-2);
+  outline-offset: 4px;
+}
+
+.Items article:hover .sprite {
+  animation: saltito 0.5s steps(2) infinite;
+}
+
+/* ---------- ESCENARIOS: tarjetas con la misma animación que los personajes ---------- */
+.Escenarios article {
+  padding: 20px;
+  border: 3px solid var(--texto);
+  background: var(--superficie);
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.Escenarios article:hover {
+  transform: translateY(-6px);
+  border-color: var(--acento);
+}
+
+.Escenarios article:focus-visible {
+  outline: 3px solid var(--acento-2);
+  outline-offset: 4px;
+}
+
+.Escenarios article:hover .sprite {
+  animation: saltito 0.5s steps(2) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .titulo,
+  .cursor,
+  .personaje:hover .sprite,
+  .Items article:hover .sprite,
+  .Escenarios article:hover .sprite {
+    animation: none;
+  }
+
+  .boton,
+  .personaje,
+  .Items article,
+  .Escenarios article,
+  .menu a {
+    transition: none;
+  }
+}
+
+/* AJUSTE RESPONSIVE: va después de todo lo demás */
+img,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* celular: hasta 640px */
+@media (max-width: 640px) {
+  .cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  .menu a {
+    display: inline-block;
+    padding: 6px 0;          /* más alto para el dedo */
+  }
+
+  .portada {
+    padding: 48px 16px;
+  }
+
+  section {
+    padding: 32px 0;
+  }
+
+  section[id] {
+    scroll-margin-top: 180px; /* en celular la cabecera pegada ocupa más */
+  }
+
+  .pantalla {
+    padding: 8px;
+    border-width: 3px;
+  }
+
+  .boton {
+    display: block;          /* botón a lo ancho: fácil de tocar */
+    text-align: center;
+  }
+}
+
+/* escritorio: desde 1000px */
+@media (min-width: 1000px) {
+  .referente {
+    columns: 2;              /* el poema en dos columnas */
+    column-gap: 40px;
+  }
+
+  .referente h2 {
+    column-span: all;        /* el título ocupa las dos */
+  }
+
+  .tarjetas {
+    gap: 32px;
+  }
+}
+
+
+/* AJUSTE RESPONSIVE
+   Pega aquí, al final, el bloque de la guía (sección "El jardín en el celular").
+   Las media queries van después de todo lo demás. */

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Girl · Un juego hecho en Bitsy</title>
+    <meta name="description" content="Página de presentación de mi videojuego hecho en Bitsy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+  <header class="cabecera">
+    <a class="marca" href="#">Good Girl</a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#jugar">Jugar</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#referente">Referente</a></li>
+        <li><a href="#personajes">Personajes</a></li>
+        <li><a href="#Items">Ítems</a></li>
+        <li><a href="#Escenarios">Escenarios</a></li>
+        <li><a href="#creditos">Créditos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portada">
+      <p class="etiqueta">Un juego hecho en Bitsy</p>
+      <h1 class="titulo">Good Girl<span class="cursor" aria-hidden="true">_</span></h1>
+      <p class="lema">No tuviste que haber salido esa noche.</p>
+      <a class="boton" href="#jugar">Jugar ahora</a>
+    </section>
+
+    <section class="jugar" id="jugar">
+      <h2>Video Juego</h2>
+      <div class="pantalla">
+        <iframe id="juego" src="juego.html" title="Juego: Good Girl"></iframe>
+      </div>
+      <p class="controles"><strong>Cómo jugar:</strong> haz clic dentro del juego y muévete con las flechas del teclado.</p>
+    </section>
+
+    <section class="historia" id="historia">
+      <h2>Historía</h2>
+
+      <p>Me inspiré en una escena explícita de la novela EL VISITANTE del escritor Stephen King, donde empalan a un niño mientras pasiava por la noche con su perrita. 
+      El aspecto visual me inspire en creador candle. Desde el inicio no puedes ingresar a la cima del castillo porque te hace falta una llave (Tus costillas) al bajar 
+      a las catacumbas te encuentras 3 partes restantes de tu cuerpo y ítem trampa (Esto para hacer que busques en cada habitación de las catatumbas). Cada ítem te dirá 
+      como fuiste empalada, pero sin ser tan literal si no un poco poético. Por último, después conseguir tus costillas puedes ingresar a la cima donde te encontraras 
+      con tu perrita la cual estará agradecida de darte paz.</p>
+  
+    </section>
+
+    <section class="referente" id="referente">
+      <h2>POETA - PERRO</h2>
+      <p>
+        Hoy no puedo cantar, apenas ladro.<br>
+        Si acaso limo el borde<br>
+        Mugroso de mis uñas<br>
+        O argumento -tan sólo-<br>
+        Exhibiebdo la punta roma de un colmillo.
+      </p>
+
+      <p>
+        Me niego a batir la cola,<br>
+        A saludar a los que vienen<br>
+        Condecorados de calaveras<br>
+        A ocupar el centro de la escena,<br>
+        A terminar de ensuciar la sucia historia.
+      </p>
+
+      <p>
+        Aún me huelen a sangre.<br>
+        Tengo olfato de perro, recuérdenlo.<br>
+        Y no me engaña que se embadurnen de oros<br>
+        Para aumentar su popularidad,<br>
+        Como si se tratara de un desodorante extranjero.
+      </p>
+
+      <p>
+        Aún traen pegados los gritos<br>
+        De los muertos matados.<br>
+        Tengo oído de perro, recuérdenlo.<br>
+        Y no me engaña que se hinquen<br>
+        En las naves de los templos,<br>
+        Ni que se ahorquen con corbatas de seda<br>
+        En las carátulas de todas las revistas.
+      </p>
+
+      <p>
+        Aunque repten en un charco de pixeles los distingo,<br>
+        Tengo ojos de perro, recuérdenlo.<br>
+        Y no dejo de mirar<br>
+        El fulgor de las lágrimas de sus víctimas,<br>
+        Que vuelan como bombillos que revientan contra el suelo.
+      </p>
+
+      <p>
+        Sé que asustan los espejos al mirarlos,<br>
+        Tengo alma de perro, recuérdenlo.<br>
+        Sé que ríen en contubernio,<br>
+        Que acumulan monedas rapadas,<br>
+        Que suturan el país con agujas de olvido<br>
+        Y contagian la enfermedad de su importancia.
+      </p>
+
+      <p>
+        Han dejado de gustarme los huesos,<br>
+        Me he vuelto un feroz vegetariano.<br>
+        Soy un poeta-perro, recuérdenlo.<br>
+        Hoy no puedo cantar, apenas ladro.<br>
+        Si acaso pulo esa sombra que no me deja.
+      </p>
+
+    </section>
+
+    <!-- PERSONAJES -->
+    <section class="personajes" id="personajes">
+      <h2>Personajes</h2>
+      <div class="tarjetas">
+
+        <article class="personaje">
+          <img class="sprite" src="img/00.png" alt="Es una almohada que mueve la boca dando a entender que esta durmiendo.">
+          <h3>Almohada fantasmal</h3>
+          <p> Busca sus costillas (Es la llave)</p>
+        </article>
+
+        <article class="personaje">
+          <img class="sprite" src="img/01.png" alt="Es una perro de la raza Husky.">
+          <h3>Husky</h3>
+          <p>Te agradece por encontrar a su dueño.</p>
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="Items" id="Items">
+      <h2>Items</h2>
+      <div class="tarjetas">
+
+        <article class="Items" tabindex="0">
+          <img class="sprite" src="img/02.png" alt="Son unas costillas">
+          <h3>Costillas</h3>
+          <p>Al obtenerlo te dice: "Es una buena chica."</p>
+        </article>
+
+        <article class="Items" tabindex="0">
+          <img class="sprite" src="img/03.png" alt="Es un hueso, una parte del cuerpo del dueño">
+          <h3>Hueso</h3>
+          <p>Al obtenerlo te dice: "Estaba paseando a Radar hasta que vi... vi..."</p>
+        </article>
+
+        <article class="Items" tabindex="0">
+          <img class="sprite" src="img/04.png" alt="Es un craneo">
+          <h3>Cranio</h3>
+          <p>Al obtenerlo te dice: "Vi que tenía una erección mientras Radar pedía ayuda."</p>
+        </article>
+
+        <article class="Items" tabindex="0">
+          <img class="sprite" src="img/05.png" alt="Es un pie">
+          <h3>Pie</h3>
+          <p>Al obtenerlo te dice: "No puedo sentir los dedos de los pies."</p>
+        </article>
+
+        <article class="Items" tabindex="0">
+          <img class="sprite" src="img/06.png" alt="Es un papel que tiene infromación escrita">
+          <h3>Texto</h3>
+          <p>Al obtenerlo te dice: "Gracias por encontrarme, pero no soy la pieza que buscas."</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="Escenarios" id="Escenarios">
+      <h2>Escenarios</h2>
+      <div class="tarjetas">
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/07.png" alt="Sala 1.">
+          <h3>Entrada</h3>
+          <p> Sala de un castillo con cuatro fogatas y musgo en el piso y enfrente una puerta que abrir.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/08.png" alt="Sala 2.">
+          <h3>Parte Superior del castillo</h3>
+          <p> Puente para subir a la cima, gotas de agua y estrellas, una perrita y una entrada a la cima. </p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/09.png" alt="Sala 3.">
+          <h3>Parte Superior del castillo</h3>
+          <p> Escaleras para subir. </p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/10.png" alt="Sala 2.">
+          <h3>Parte Superior del castillo</h3>
+          <p> La cima de la torre con burbujas de agua y estrellas. </p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/11.png" alt="Sala 2.">
+          <h3>Parte Superior del castillo</h3>
+          <p>Cima de la torre con burbujar de agua (Siendo consumida por el mar)</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/12.png" alt="Sala 2.">
+          <h3>Parte Superior del castillo</h3>
+          <p>La cima de la torre consumada por el mar.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/13.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Los escalones para llegar a las catacumbas. </p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/14.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Catacumbas.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/15.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Sala con un hueso y burbujas.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/16.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Sala con un pie y burbujas.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/17.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Sala Costilla y burbujas.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/18.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Sala Craneo y burbujas.</p>
+        </article>
+
+        <article class="Escenarios" tabindex="0">
+          <img class="sprite" src="img/19.png" alt="Sala 2.">
+          <h3>Parte Inferior del castillo</h3>
+          <p>Sala con escritos y burbujas.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="creditos" id="creditos">
+      <h2>Créditos</h2>
+      <ul class="lista">
+        <li><strong>Creación:</strong> Javier Ortiz</li>
+        <li><strong>Herramienta:</strong> Bitsy, de Adam Le Doux</li>
+        <li><strong>Curso:</strong> Lenguajes Digitales I · Universidad El Bosque · 2026</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Good Girl 2026</p>
+  </footer>
+</body>
+</html>
